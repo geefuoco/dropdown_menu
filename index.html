@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dropdown Menu</title>
-    <link rel="stylesheet" href="./style.scss">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+    <script src="./dropdown.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,17 +14,32 @@
             <div class="nav-logo">
                 <h1>Logo</h1>
             </div>
-            <div class="nav-item">
-                About
-            </div>
-            <div class="nav-item">
-                Pricing
-            </div>
-            <div class="nav-item">
-                FAQ
-            </div>
-            <div class="nav-item">
-                Contact Us
+            <div class="nav-collapse">
+                <div class="nav-item">
+                    About
+                </div>
+                <div class="nav-item">
+                    Pricing
+                </div>
+                <div class="nav-item dropdown-menu">
+                    FAQ &nabla;
+                    <div class="menu-container hidden" data="dropdown">
+                        <ul>
+                            <li>
+                                <p>Is this product free?</p>
+                            </li>
+                            <li>
+                                <p>When will I receive my product?</p>
+                            </li>
+                            <li>
+                                <p>How do I use my product?</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    Contact Us
+                </div>
             </div>
         </nav>
     </header>
@@ -43,7 +59,7 @@
     </main>
 
     <footer>
-        Copyright &:copy 2015
+        Copyright &copy; 2015
     </footer>
 
 </body>
